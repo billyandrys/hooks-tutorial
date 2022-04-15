@@ -1,13 +1,14 @@
+
 import React from 'react'
+import { useCounteRender } from './useCounterRender'
 
+export const Hello = React.memo(({ increment })=>{
 
-export const Hello = ()=>{
-    React.useEffect(() => {
-       console.log('render')
-       return ()=>{
-           console.log('unmount')
-       }
-    }, []);
+    //useCounteRender()
 
-    return <div>hello</div>
-}
+    return(
+        <>
+            <button onClick={increment}>increments</button>
+        </>
+    )
+})
